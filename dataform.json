@@ -1,0 +1,8 @@
+{
+  "defaultSchema": "dataform_andresousa",  
+  "assertionSchema": "dataform_assertions",
+  "warehouse": "bigquery",
+  "defaultDatabase": "prodam-data-dev-dwh-plg",
+  "defaultLocation": "southamerica-east1"
+}
+    
