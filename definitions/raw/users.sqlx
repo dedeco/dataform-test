@@ -1,0 +1,7 @@
+config {
+  type: "declaration",
+  database: "prodam-data-dev-dwh-plg",  
+  schema: "stackoverflow",
+  name: "users",
+  description: "tabela bruta de usuários"
+}
