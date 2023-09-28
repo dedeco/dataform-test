@@ -1,7 +1,8 @@
 config {
     type: "view",
     schema: "staging_andresousa",
-    description: "versão limpa dos usuários da tabela users"
+    description: "versão limpa dos usuários da tabela users",
+        tags:["staging"]
 }
 
 SELECT id as user_id,

@@ -2,6 +2,6 @@ config {
   type: "declaration",
   database: "prodam-data-dev-dwh-plg",  
   schema: "stackoverflow",
-  name: "post_answers",
+  name: "posts_answers",
   description: "tabela bruta de answers"
 }

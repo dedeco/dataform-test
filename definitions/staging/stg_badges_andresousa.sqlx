@@ -1,7 +1,8 @@
 config {
     type: "view",
     schema: "staging_andresousa",
-    description:"staging badges"
+    description:"staging badges",
+    tags:["staging"]
 }
 
 SELECT 

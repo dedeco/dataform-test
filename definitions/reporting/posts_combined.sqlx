@@ -1,0 +1,41 @@
+config {
+    type: "table",
+    schema :"reporting_andresousa",
+    tags: ["daily", "reporting"],
+    description: "Combinar respostas and questões em um simples tabela",
+    columns: {
+      post_id: `identificador unico do post`,
+      created_at: `data que post foi criado`,
+      type: `se s pergunta ou repsosta`,
+      title: `titulo do post`,
+      body: `conteudo do post`
+    },
+    assertions :{
+      nonNull: ["post_id", "created_at"]
+    },
+    bigquery: {
+      partitionBy: "date(created_at)"
+    }
+}
+
+select
+  post_id,
+  created_at,
+  type,
+  title,
+  body,
+  owner_user_id,
+  parent_id
+from
+  ${ref("stg_posts_answers")}
+union all
+select
+  post_id,
+  created_at,
+  type,
+  title,
+  body,
+  owner_user_id,
+  parent_id
+from
+  ${ref("stg_posts_questions")}

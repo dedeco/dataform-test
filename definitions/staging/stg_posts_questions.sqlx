@@ -1,0 +1,19 @@
+config {
+  type: "view",
+  schema: "staging_andresousa",
+  description: "Versão limpa das questões",
+      tags:["staging"]
+}
+
+SELECT
+  id AS post_id,
+  creation_date AS created_at,
+  'question' AS type,
+  title,
+  body,
+  owner_user_id,
+  parent_id
+FROM
+  ${ref("posts_questions")}
+WHERE
+  creation_date >= TIMESTAMP("2020-01-01")
