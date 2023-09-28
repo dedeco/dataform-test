@@ -3,6 +3,13 @@
   "assertionSchema": "dataform_assertions",
   "warehouse": "bigquery",
   "defaultDatabase": "prodam-data-dev-dwh-plg",
-  "defaultLocation": "southamerica-east1"
+  "defaultLocation": "southamerica-east1",
+    "codeCompilationConfig": {
+        "vars": {
+            "env": "dev",
+            "schema":"stackoverflow_com",
+            "project":"andresousa-dataform-dev"
+        }
+    }
 }
     
